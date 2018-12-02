@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MyTestSuite]">
+  <listeners>
+    <listener class-name="testTestNG.MySuiteListener"/>
+    <listener class-name="testTestNG.MyTestListener"/>
+    <listener class-name="testTestNG.MyReporter"/>
+    <listener class-name="testTestNG.RetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Test111(failed)">
+    <classes>
+      <class name="myTestNG.TestMsg">
+        <methods>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+          <include name="testCalculatorMsg3"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- myTestNG.TestMsg -->
+    </classes>
+  </test> <!-- Test111(failed) -->
+  <test thread-count="5" name="Test222(failed)">
+    <classes>
+      <class name="myTestNG.ExceptionTest">
+        <methods>
+          <include name="test3"/>
+          <include name="afterMethod"/>
+          <include name="test6"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- myTestNG.ExceptionTest -->
+      <class name="myTestNG.TimeoutTest">
+        <methods>
+          <include name="timeFailMethod"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- myTestNG.TimeoutTest -->
+      <class name="myTestNG.DependsOnGroupsTest">
+        <methods>
+          <include name="testDelete"/>
+          <include name="accessAdminPage"/>
+          <include name="backendGroupDependentTest1"/>
+          <include name="accessHomePage"/>
+          <include name="testInsert"/>
+          <include name="testUpdate"/>
+        </methods>
+      </class> <!-- myTestNG.DependsOnGroupsTest -->
+      <class name="myTestNG.DependsOnMethodsTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="mul"/>
+          <include name="add"/>
+          <include name="lesser"/>
+          <include name="greater"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- myTestNG.DependsOnMethodsTest -->
+    </classes>
+  </test> <!-- Test222(failed) -->
+  <test thread-count="5" name="Test444(failed)">
+    <classes>
+      <class name="myTestNG.CalculatorDataProviderTest">
+        <methods>
+          <include name="addNumbers" invocation-numbers="1 1 1 1 3 3 4 4"/>
+          <include name="mulNumbers" invocation-numbers="2 2 2 2"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- myTestNG.CalculatorDataProviderTest -->
+    </classes>
+  </test> <!-- Test444(failed) -->
+  <test thread-count="5" name="Test555(failed)">
+    <parameter name="num1" value="36"/>
+    <parameter name="num3" value="3"/>
+    <parameter name="num2" value="12"/>
+    <classes>
+      <class name="myTestNG.ParameterTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="compareNumbers" invocation-numbers="0 0 0 0"/>
+        </methods>
+      </class> <!-- myTestNG.ParameterTest -->
+    </classes>
+  </test> <!-- Test555(failed) -->
+</suite> <!-- Failed suite [MyTestSuite] -->
