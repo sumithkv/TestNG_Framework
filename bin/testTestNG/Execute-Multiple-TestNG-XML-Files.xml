@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MasterTestSuite">
+
+	<!-- When there are multiple test suites in different xml files, to execute 
+		all of them together as a single test suite -->
+	<suite-files>
+		<suite-file path="SystemTestSuite.xml"></suite-file>
+		<suite-file path="RegressionTestSuite.xml"></suite-file>
+		<suite-file path="SmokeTestSuite.xml"></suite-file>
+		<suite-file path="FunctionalTestSuite.xml"></suite-file>
+	</suite-files>
+</suite>
